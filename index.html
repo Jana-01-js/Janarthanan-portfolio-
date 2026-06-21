@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Janarthanan R | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Background Glow */
+
+body::before{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#00d9ff30;
+    border-radius:50%;
+    filter:blur(150px);
+    top:-100px;
+    left:-100px;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#8b5cf630;
+    border-radius:50%;
+    filter:blur(150px);
+    bottom:-100px;
+    right:-100px;
+    z-index:-1;
+}
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    background:linear-gradient(90deg,#00d9ff,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#fff;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00d9ff;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 10%;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:800;
+    line-height:1.2;
+}
+
+.hero span{
+    background:linear-gradient(90deg,#00d9ff,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h3{
+    margin-top:15px;
+    color:#cbd5e1;
+    font-weight:500;
+}
+
+.hero p{
+    max-width:750px;
+    margin:25px auto;
+    color:#94a3b8;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(90deg,#00d9ff,#8b5cf6);
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* Sections */
+
+section{
+    padding:90px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.8rem;
+    margin-bottom:50px;
+    font-weight:700;
+}
+
+.section-title span{
+    color:#00d9ff;
+}
+
+/* Glass Card */
+
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:30px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(0,217,255,.25);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+/* Skills */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+.skill{
+    padding:12px 22px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#00d9ff,#8b5cf6);
+    font-weight:600;
+}
+
+/* Achievement */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    font-size:3rem;
+    color:#00d9ff;
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:12px 0;
+    color:#cbd5e1;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+nav ul{
+    display:none;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">JR</div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+    <h1>Hi, I'm <span>Janarthanan R</span></h1>
+
+    <h3>Computer Science Engineer | AI & ML Enthusiast | Software Developer</h3>
+
+    <p>
+        Computer Science undergraduate from SNS College of Technology with hands-on
+        experience in Machine Learning, Python Development, React, SQL, and Azure Cloud.
+        Passionate about building real-world software solutions and AI-powered applications.
+    </p>
+
+    <a href="#projects" class="btn">View My Work</a>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About <span>Me</span></h2>
+
+<div class="card">
+<p style="line-height:1.9;color:#cbd5e1;">
+I am a Computer Science Engineering student graduating in 2027 from SNS College of Technology.
+I have built machine learning solutions including cattle breed recognition and disease detection systems,
+face-recognition attendance tools, and smart electricity monitoring applications.
+My goal is to become a software engineer capable of building scalable products that create real-world impact.
+</p>
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">Technical <span>Skills</span></h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">React.js</div>
+<div class="skill">Java</div>
+<div class="skill">C++</div>
+<div class="skill">MySQL</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">OpenCV</div>
+<div class="skill">CNN</div>
+<div class="skill">Azure AI-900</div>
+<div class="skill">Flutter</div>
+<div class="skill">DSA</div>
+<div class="skill">OOP</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Featured <span>Projects</span></h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🐄 Cattle Scope</h3>
+<br>
+<p>
+Built an ML-powered cattle breed recognition and disease detection system
+using Python, OpenCV and CNN models for livestock health monitoring.
+</p>
+</div>
+
+<div class="card">
+<h3>📸 Smart Face Detection</h3>
+<br>
+<p>
+Developed a facial recognition attendance system that automatically
+detects and records attendance in real time.
+</p>
+</div>
+
+<div class="card">
+<h3>⚡ Smart Electricity Bill Updates</h3>
+<br>
+<p>
+Built a Flutter application that notifies users whenever electricity
+consumption exceeds the free-unit threshold.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section>
+
+<h2 class="section-title">Experience</h2>
+
+<div class="card">
+
+<h3>ByteXL Training Program</h3>
+<p style="color:#00d9ff;">Nov 2025 – Dec 2025</p>
+
+<br>
+
+<p style="line-height:1.9;color:#cbd5e1;">
+Completed structured training in Quantitative Aptitude, Machine Learning Fundamentals,
+Corporate Placement Readiness, Technical Interviews and HR Preparation.
+</p>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section>
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="stats">
+
+<div class="card stat">
+<h2>3rd</h2>
+<p>Aptirush Competition at PSG College of Technology</p>
+</div>
+
+<div class="card stat">
+<h2>2+</h2>
+<p>Microsoft Azure Certifications</p>
+</div>
+
+<div class="card stat">
+<h2>4+</h2>
+<p>Real-World Software & ML Projects</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>B.E Computer Science & Engineering</h3>
+<p>SNS College of Technology</p>
+<p>2023 – 2027</p>
+</div>
+
+<div class="card">
+<h3>Higher Secondary Education</h3>
+<p>Vivekam Matric Higher Secondary School</p>
+<p>2022 – 2023</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section>
+
+<h2 class="section-title">Certifications</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Microsoft Azure AI-900</h3>
+<p>Azure Artificial Intelligence Fundamentals</p>
+</div>
+
+<div class="card">
+<h3>Azure Data Fundamentals</h3>
+<p>Microsoft Certified</p>
+</div>
+
+<div class="card">
+<h3>NPTEL Certification</h3>
+<p>Human Computer Interaction</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact <span>Me</span></h2>
+
+<div class="contact">
+
+<p>📍 Coimbatore, Tamil Nadu</p>
+<p>📧 janapersonal01@gmail.com</p>
+<p>📞 +91 81225 99306</p>
+<p>💼 LinkedIn: linkedin.com/in/janarthanan-rajan</p>
+
+<br>
+
+<a href="#" class="btn">Download Resume</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Janarthanan R • Software Developer Portfolio
+</footer>
+
+</body>
+</html>
